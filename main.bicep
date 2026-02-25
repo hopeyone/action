@@ -27,12 +27,12 @@ resource stg 'Microsoft.Storage/storageAccounts@2019-04-01' = {
     }
 }
 
-module webModule './webApp.bicep' = {
-    name: 'webDeploy'
-    params: {
-        skuName: 'S1'
-        location: location
-    }
-}
+//module webModule './webApp.bicep' = {
+//    name: 'webDeploy'
+//    params: {
+//        skuName: 'S1'
+//        location: location
+//    }
+//}
 
 output storageEndpoint object = stg.properties.primaryEndpoints
